@@ -6,21 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flask App new🚀</title>
     <style>
-        /* Import Google Fonts */
+        /* Import Google Font */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
         /* Reset Default Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
-        /* Gradient Background */
+        /* Background with subtle gradient */
         body {
-            background: linear-gradient(135deg, #5c258d, #4389a2);
+            background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
             color: #fff;
             display: flex;
             justify-content: center;
@@ -29,57 +28,51 @@
             padding: 20px;
         }
 
-        /* Glassmorphism Effect Container */
+        /* Glassmorphic Container */
         .container {
             max-width: 600px;
             width: 100%;
             padding: 30px;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
             border-radius: 15px;
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .container:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(255, 255, 255, 0.1);
         }
 
-        /* Stylish Header */
+        /* Elegant Heading */
         h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 600;
             background: linear-gradient(135deg, #ff9800, #e65100);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
         }
 
-        /* Chat Messages Styling */
+        /* Messages Box */
         .messages {
             margin-bottom: 20px;
             padding: 15px;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
-            max-height: 300px;
+            max-height: 200px;
             overflow-y: auto;
         }
 
         .messages p {
             padding: 10px;
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 8px;
-            margin-bottom: 10px;
-            font-size: 1rem;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        .messages p:nth-child(odd) {
-            background: rgba(0, 0, 0, 0.3);
+            margin-bottom: 5px;
+            font-size: 0.95rem;
         }
 
         /* Animated Input Fields */
@@ -112,24 +105,11 @@
             cursor: pointer;
             font-size: 16px;
             transition: all 0.3s ease;
-            font-weight: 500;
         }
 
         input[type="submit"]:hover {
             box-shadow: 0 0 20px rgba(255, 152, 0, 0.6);
             transform: translateY(-2px);
-        }
-
-        /* Smooth Animation for Messages */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         /* Mobile Responsive */
@@ -151,7 +131,7 @@
 
 <body>
     <div class="container">
-        <h1>Two Tier Flask App</h1>
+        <h1>Flask + MySQL App [2 tier] - Junoon 🔥</h1>
 
         <div class="messages">
             {% for message in messages %}
@@ -165,12 +145,12 @@
         </form>
     </div>
 
-    <!-- jQuery for AJAX Requests -->
+    <!-- jQuery for Smooth AJAX Requests -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
             $("#messageForm").on("submit", function(event) {
-                event.preventDefault();
+                event.preventDefault(); // Prevent page reload
 
                 let messageInput = $("input[name='new_message']");
                 let message = messageInput.val().trim();
