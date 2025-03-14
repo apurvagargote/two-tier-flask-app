@@ -1,9 +1,14 @@
-# Kubernetes Cluster Setup on EC2 with MySQL Deployment
+## 🚀Two-Tier Flask App with MySQL Database on Kubernetes
 
 This project demonstrates setting up a **Kubernetes cluster** on **AWS EC2 instances**, deploying a **MySQL database**, and integrating it with a **two-tier application**.
+
+ ![Flask App](Images/flask-app.png)
+
+## MySql Databse 
+![MySQL Database](Images/mysql-database.png) 
 ## Prerequisites
 
-Before you begin, make sure you have the foll0wing installed:
+Before you begin, make sure you have the following installed:
 
 - Docker
 - Github (optional, for cloning the repository)
@@ -169,4 +174,9 @@ kubectl apply -f <file_name>.yml
    
 2. **Verify Security Group Rules**:
    - Ensure that the inbound rule allows traffic from your IP or the public internet (0.0.0.0/0) depending on your security requirements.
+     
+![Security Groups](Images/security-groups.png)
+     
+### Your application is now running! 🎉
 
+You can access the Flask application through the exposed port on your EC2 instance. Open your browser and navigate to http://<EC2_Instance_IP>:30004 to see the app in action. 
